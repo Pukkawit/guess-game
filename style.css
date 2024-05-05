@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #747475;
+    font-size: 16px;
+}
+
+header {
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .3em solid #ffffff;
+}
+
+header h1 {
+    padding-top: 1.5em;
+    color: #ffffff;
+    margin-bottom: .5em;
+}
+
+header .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: .3em;
+    background-color: #ffffff;
+    padding: 2px 7px;
+    font-size: 4em;
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #000000;
+}
+
+main {
+    margin-top: 3em;
+}
+
+.message {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    column-gap: 2em;
+    align-items: end;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.left input {
+    width: 150px;
+    height: 10px;
+    padding: 20px;
+    outline: none;
+    border: 3px solid #ffffff;
+    text-align: center;
+    background-color: inherit;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* Removes the spin button */
+.left input[type="number"]::-webkit-inner-spin-button,
+.left input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.left input[type="number"] {
+    overflow: hidden;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer/Edge */
+}
+
+.left input[type="number"]::placeholder {
+    text-align: center;
+}
+
+.btn {
+    padding: 1em;
+    border: none;
+    margin-top: 1em;
+}
