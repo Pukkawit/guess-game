@@ -1,98 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #747475;
-    font-size: 16px;
+  background-color: #747475;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
 }
-
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
 header {
-    height: 10em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom: .3em solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.3em solid #e4e4e4;
+  margin-bottom: 3rem;
 }
 
 header h1 {
-    padding-top: 1.5em;
-    color: #ffffff;
-    margin-bottom: .5em;
+  padding-top: 1.5em;
+  color: #ffffff;
+  margin-bottom: 0.5em;
+  font-family: 'Press Start 2P', system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.3;
 }
-
+.between {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #adf802;
+}
 header .number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: .3em;
-    background-color: #ffffff;
-    padding: 2px 7px;
-    font-size: 4em;
-    width: 100px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0.6em;
+  background-color: #ffffff;
+  padding: 2px 7px;
+  font-size: 4em;
+  width: 100px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #0000005a;
 }
 
 main {
-    margin-top: 3em;
+  margin-top: 3em;
 }
 
 .message {
-    text-align: center;
-    margin-bottom: 1em;
+  text-align: center;
+  margin-bottom: 3em;
+  font-family: 'Press Start 2P', system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
-
+.score {
+  color: #00259e;
+  font-weight: 600;
+}
 .content {
-    display: flex;
-    justify-content: center;
-    column-gap: 2em;
-    align-items: end;
+  display: flex;
+  justify-content: center;
+  column-gap: 2em;
+  align-items: end;
 }
 
 .left {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
 .left input {
-    width: 150px;
-    height: 10px;
-    padding: 20px;
-    outline: none;
-    border: 3px solid #ffffff;
-    text-align: center;
-    background-color: inherit;
-    font-size: 2em;
-    cursor: pointer;
+  width: 150px;
+  height: 10px;
+  padding: 20px;
+  outline: none;
+  border: 3px solid #ffffff;
+  text-align: center;
+  background-color: inherit;
+  font-size: 2em;
+  cursor: pointer;
 }
 
 /* Removes the spin button */
-.left input[type="number"]::-webkit-inner-spin-button,
-.left input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.left input[type='number']::-webkit-inner-spin-button,
+.left input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.left input[type="number"] {
-    overflow: hidden;
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* Internet Explorer/Edge */
+.left input[type='number'] {
+  overflow: hidden;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer/Edge */
 }
 
-.left input[type="number"]::placeholder {
-    text-align: center;
+.left input[type='number']::placeholder {
+  text-align: center;
 }
 
 .btn {
-    padding: 1em;
-    border: none;
-    margin-top: 1em;
+  padding: 1em;
+  border: none;
+  margin-top: 1em;
+  font-family: 'Press Start 2P', system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.again {
+  color: #005f9e;
+}
+.check {
+  color: #e95d00;
+}
+
+@media all and (max-width: 600px) {
+  .content {
+    column-gap: 1em;
+  }
+  .left input {
+    width: 130px;
+  }
+  .message {
+    max-width: 350px;
+  }
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 7rem;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 20px;
+}
+footer p {
+  color: #fff;
+  text-align: center;
 }
